@@ -1,0 +1,33 @@
+Find all the company drives and students who are appeared for the placement.
+
+Query : 
+        db.company_drives.find({},{ "Company_Name":1 , "Appeared":1 , "Appeared_Students":1 , "_id":0 });
+        
+        Result :
+            [
+                {
+                Company_Name: 'Company1',
+                Appeared: 2023-10-16T00:00:00.000Z,
+                Appeared_Students: ['user1','user2','user4']
+                },
+                {
+                Company_Name: 'Company2',
+                Appeared: 2023-10-21T00:00:00.000Z,
+                Appeared_Students: ['user1','user3','user5']
+                },
+                {
+                Company_Name: 'Company3',
+                Appeared: 2023-10-24T00:00:00.000Z,
+                Appeared_Students: ['user2','user3','user5']
+                },
+                {
+                Company_Name: 'Company4',
+                Appeared: 2023-10-09T00:00:00.000Z,
+                Appeared_Students: ['user2','user4','user5']
+                },
+                {
+                Company_Name: 'Company5',
+                Appeared: 2023-10-19T00:00:00.000Z,
+                Appeared_Students: ['user1','user3','user5']
+                }
+            ]

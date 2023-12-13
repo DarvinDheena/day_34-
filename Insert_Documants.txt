@@ -1,0 +1,64 @@
+// TO insert the required documents at their specified collections 
+
+Collection : users => 
+                    db.users.insertmany([                       
+                            { "user_id" : 1 , "user_name" :"user1" , "user_email":"user1@gmail.com","batch_id" :24 },
+                            { "user_id" : 2 , "user_name" :"user2" , "user_email":"user2@gmail.com","batch_id" :24 },
+                            { "user_id" : 3 , "user_name" :"user3" , "user_email":"user3@gmail.com","batch_id" :24 },
+                            { "user_id" : 4 , "user_name" :"user4" , "user_email":"user4@gmail.com","batch_id" :24 },
+                            { "user_id" : 5 , "user_name" :"user5" , "user_email":"user5@gmail.com","batch_id" :24 }
+                    ]);
+
+Collection : codekata =>
+                    db.codekata.insertmany([
+                            {"id" : 1 , "catagory_name":"Absolute Beginner","numberofproblems":40,"level":"easy"},
+                            {"id" : 2 , "catagory_name":"Input/Output","numberofproblems":35,"level":"medium"},
+                            {"id" : 3 , "catagory_name":"Mathematics","numberofproblems":60,"level":"hard"},
+                            {"id" : 4 , "catagory_name":"Arrays","numberofproblems":19,"level":"medium"},
+                            {"id" : 5 , "catagory_name":"MicroSoft","numberofproblems":55,"level":"hard"}
+                    ]);
+
+Collection : attendance => 
+                    db.attendance.insertmany([
+                            {"id" : 1,"user_name" :"user1","present":[1,2,3,4],"absent":[5]},
+                            {"id" : 1,"user_name" :"user1","present":[1,3,4],"absent":[5,2]},
+                            {"id" : 1,"user_name" :"user1","present":[2,3,5],"absent":[1,4]},
+                            {"id" : 1,"user_name" :"user1","present":[1,3,4,5],"absent":[2]},
+                            {"id" : 1,"user_name" :"user1","present":[1,2,4,5],"absent":[3]}
+                    ]);
+
+Collection : topics =>
+                    db.topics.insertmany([
+                            {"id" : 1, "name" : "HTML" , "description" : "HyperTextMarkupLanguage", "date" : new Date("2023-10-16") },
+                            {"id" : 2, "name" : "JavaScript" , "description" : "JavaScript or EcmaScript", "date" : new Date("2023-10-19") },
+                            {"id" : 3, "name" : "ReactJS" , "description" : "ReactJS Library from facebook", "date" : new Date("2023-10-21") },
+                            { "id" : 4, "name" : "MongoDb" , "description" : "MongoDb - noSQL database", "date" : new Date("2023-11-16") },
+                            { "id" : 5, "name" : "Node JS" , "description" : "Node JS for Back End language", "date" : new Date("2023-11-16") }
+                    ]);
+
+Collection : tasks => 
+                    db.tasks.insert([
+                            {"id" : 1,"topic_name":"CRUD with React","Description":"Create Read update delete","date":new Date("2023-10-16"),"submitted_user_id's":[1,2,3],"not_submitted_user_id's":[4,5]},
+                            {"id" : 2,"topic_name":"Node Js","Description":"Node js for back end language","date":new Date("2023-10-19"),"submitted_user_id's":[1,3,4,5],"not_submitted_user_id's":[2]},
+                            {"id" : 3,"topic_name":"React ","Description":"React js is a framework for javascript","date":new Date("2023-10-21"),"submitted_user_id's":[1,3,5],"not_submitted_user_id's":[2,4]},
+                            {"id" : 4,"topic_name":"javaScript","Description":"javascript is a langugae of a web","date":new Date("2023-11-16"),"submitted_user_id's":[2,4,5],"not_submitted_user_id's":[1,3]},
+                            {"id" : 5,"topic_name":"Css","Description":"cascading style sheet","date":new Date("2023-11-16"),"submitted_user_id's":[3,5],"not_submitted_user_id's":[2,4,1]}
+                    ]);
+
+Collection : company_drives => 
+                    db.company_drives.insertmany([
+                            {"id":1,"Company_Name":"Company1","Appeared":new Date("2023-10-16"),"Appeared_Students":["user1","user2","user4"]},
+                            {"id":2,"Company_Name":"Company2","Appeared":new Date("2023-10-21"),"Appeared_Students":["user1","user3","user5"]},
+                            {"id":3,"Company_Name":"Company3","Appeared":new Date("2023-10-24"),"Appeared_Students":["user2","user3","user5"]},
+                            {"id":4,"Company_Name":"Company4","Appeared":new Date("2023-10-09"),"Appeared_Students":["user2","user4","user5"]},
+                            {"id":5,"Company_Name":"Company5","Appeared":new Date("2023-10-19"),"Appeared_Students":["user1","user3","user5"]}
+                    ]);
+
+Collection : mentors => 
+                    db.mentors.insertmany([
+                            {"id":1,"mentor_name":"mentor1","mentor_Email":"mentor1@gmail.com","menties":["user1","user3","user5","user7"]},
+                            {"id":1,"mentor_name":"mentor1","mentor_Email":"mentor1@gmail.com","menties":["user15","user17","user19","user20"]},
+                            {"id":1,"mentor_name":"mentor1","mentor_Email":"mentor1@gmail.com","menties":["user18","user16","user14","user12"]},
+                            {"id":1,"mentor_name":"mentor1","mentor_Email":"mentor1@gmail.com","menties":["user2","user9","user11","user13"]},
+                            {"id":1,"mentor_name":"mentor1","mentor_Email":"mentor1@gmail.com","menties":["user4","user6","user8","user10"]}
+                    ]);

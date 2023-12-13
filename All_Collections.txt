@@ -1,0 +1,37 @@
+// TO create Collections :
+
+1 . users 
+    Query : 
+        db.createCollection.("users");
+        Result :
+            { "ok" : 1 }
+2 . codekata 
+    Query : 
+        db.createCollection.("codekata");
+        Result :
+            { "ok" : 1 }
+3 . attendance 
+    Query : 
+        db.createCollection.("attendance");
+        Result :
+            { "ok" : 1 }
+4 . topics 
+    Query : 
+        db.createCollection.("topics");
+        Result :
+            { "ok" : 1 }
+5 . tasks
+    Query : 
+        db.createCollection.("tasks");
+        Result :
+            { "ok" : 1 }
+6 . company_drives
+    Query : 
+        db.createCollection.("company_drives");
+        Result :
+            { "ok" : 1 }
+7 . mentors 
+    Query :
+        db.createCollection.("mentors");
+        Result : 
+            { "ok" : 1 }

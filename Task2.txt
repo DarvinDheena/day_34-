@@ -1,0 +1,35 @@
+Find all the company drives which appeared between 15 oct-2020 and 31-oct-2020
+
+Query : 
+        db.company_drives.find({"Appeared" : { $gte : ISODate("2023-10-15"),$lte : ISODate("2023-10-31") } });
+
+        Result : 
+            [{
+            _id: ObjectId("6579a2bb2f42720316e609c1"),
+            id: 1,
+            Company_Name: 'Company1',
+            Appeared: 2023-10-16T00:00:00.000Z,
+            Appeared_Students: ['user1','user2','user4']
+            },
+            {
+            _id: ObjectId("6579a2bb2f42720316e609c2"),
+            id: 2,
+            Company_Name: 'Company2',
+            Appeared: 2023-10-21T00:00:00.000Z,
+            Appeared_Students: ['user1','user3','user5']
+            },
+            {
+            _id: ObjectId("6579a2bb2f42720316e609c3"),
+            id: 3,
+            Company_Name: 'Company3',
+            Appeared: 2023-10-24T00:00:00.000Z,
+            Appeared_Students: ['user2','user3','user5']
+            }, 
+            {
+            _id: ObjectId("6579a2bb2f42720316e609c5"),
+            id: 5,
+            Company_Name: 'Company5',
+            Appeared: 2023-10-19T00:00:00.000Z,
+            Appeared_Students: ['user1','user3','user5']
+            } ]
+ 

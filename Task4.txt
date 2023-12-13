@@ -1,0 +1,10 @@
+Find all the mentors with who has the mentee's count more than 15
+
+Query : 
+        db.mentors.find({ $where : this.menties.length > 15 },
+                        { "_id":0 , "mentor_name":1 });
+
+        Result : 
+        [
+            // empty ..,, no more mentors is greater then 15  menties
+        ]
